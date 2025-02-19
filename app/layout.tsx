@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter, Rubik } from "next/font/google";
 
 import { cn } from "@/lib/utils";
+import Nav from "@/components/Nav";
 
 const fontSans = Inter({
   variable: "--font-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
           fontHeading.variable
         )}
       >
+        <Nav />
         {children}
       </body>
     </html>

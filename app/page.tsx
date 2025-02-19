@@ -4,7 +4,6 @@ import { ProductCards } from "@/components/ProductCards";
 export default function HomePage() {
   return (
     <>
-      <Nav />
       <Section />
       <ProductCards />
     </>

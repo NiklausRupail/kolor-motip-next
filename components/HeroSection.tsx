@@ -19,10 +19,10 @@ export function Section() {
         </div>
         <div className="relative z-10 container mx-auto px-4 py-32 h-full flex items-center">
           <div className="max-w-2xl">
-            <h1 className="font-heading text-5xl font-bold tracking-tight text-white mb-6">
+            <h1 className="font-heading text-2xl md:text-5xl font-bold tracking-tight text-white mb-6">
               Sklep lakierniczy F.H Kolor w&nbsp;Katowicach
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="md:text-xl text-sm text-muted-foreground mb-8">
               Sklep F.H. Kolor w Katowicach działa od 2000 roku, zdobywając zaufanie klientów z
               branży motoryzacyjnej. Specjalizujemy się w sprzedaży lakierów do wszystkich marek
               aut. Pomagamy również dobrać odpowiedni odcień i precyzyjnie dopasować kolor dzięki
@@ -36,7 +36,7 @@ export function Section() {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-background/20 hover:bg-background/40 text-white"
+                className="bg-background/20 hover:bg-background/40 hidden sm:block text-white"
               >
                 Czytaj WIęcej
               </Button>
