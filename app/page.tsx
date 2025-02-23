@@ -1,11 +1,10 @@
-import { Section } from "@/components/HeroSection";
-import Nav from "@/components/Nav";
+import { HeroSection } from "@/components/HeroSection";
 import { ProductCards } from "@/components/ProductCards";
 export default function HomePage() {
-  return (
-    <>
-      <Section />
-      <ProductCards />
-    </>
-  );
+	return (
+		<>
+			<HeroSection />
+			<ProductCards />
+		</>
+	);
 }

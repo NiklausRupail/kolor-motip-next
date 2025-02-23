@@ -1,11 +1,13 @@
 import Image from "next/image";
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 export function ProductCards() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mt-16">
-      <Card className="flex flex-col">
+      <Card>
+        <Link href={'/produkty/lakiery-samochodowe'}>
         <CardHeader>
           <Image
             alt="Lakiery samochodowe"
@@ -23,6 +25,7 @@ export function ProductCards() {
             blender itp.
           </p>
         </CardContent>
+        </Link>
       </Card>
       <Card className="flex flex-col">
         <CardHeader>
@@ -42,7 +45,7 @@ export function ProductCards() {
           </p>
         </CardContent>
       </Card>
-      <Card className="flex flex-col">
+      <Card>
         <CardHeader>
           <Image
             alt="Tuning"
@@ -79,7 +82,8 @@ export function ProductCards() {
           </p>
         </CardContent>
       </Card>
-      <Card className="flex flex-col">
+      <Card>
+        <Link href={"/#chuj"}>
         <CardHeader>
           <Image
             alt="Lakiery specjalistyczne"
@@ -96,8 +100,9 @@ export function ProductCards() {
             cynk z efektem chromu, lakier żaroodporny, podkład pod plastik.
           </p>
         </CardContent>
+        </Link>
       </Card>
-      <Card className="flex flex-col">
+      <Card>
         <CardHeader>
           <Image
             alt="Spraye do graffiti"
@@ -115,7 +120,7 @@ export function ProductCards() {
           </p>
         </CardContent>
       </Card>
-      <Card className="flex flex-col">
+      <Card>
         <CardHeader>
           <Image
             alt="Lakiery uniwersalne"
@@ -133,7 +138,7 @@ export function ProductCards() {
           </p>
         </CardContent>
       </Card>
-      <Card className="flex flex-col">
+      <Card>
         <CardHeader>
           <Image
             alt="Spraye techniczne"
