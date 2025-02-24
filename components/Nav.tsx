@@ -13,6 +13,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import useWindowSize from "@/hooks/useWindowSize";
 
 
 const knowledgeBase =
@@ -35,10 +36,13 @@ const products = [
 ];
 
 const Nav = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+  const windowWidth = useWindowSize().width;
+  const breakpoint = 1024;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -54,7 +58,7 @@ const Nav = () => {
             />
           </a>
         </div>
-        <nav className="hidden md:flex items-center space-x-6">
+        {windowWidth > breakpoint && (<nav className="hidden md:flex items-center space-x-6">
           <a
             href="#services"
             className="text-sm font-medium hover:text-primary"
@@ -90,7 +94,7 @@ const Nav = () => {
                             className="rounded-sm"
                           />
                           <div className="mb-2 mt-4 text-lg font-medium">
-                            Kolor Motip
+                            Nasze Produkty
                           </div>
                           <p className="text-sm leading-tight text-muted-foreground">
                             Zapraszamy do obejrzenia naszej szerokiej gamy produktów.
@@ -113,10 +117,10 @@ const Nav = () => {
                 <NavigationMenuTrigger>
 
                   <a
-                    href="#gallery"
+                    href="/baza-wiedzy"
                     className="text-sm font-medium hover:text-primary"
                   >
-                    Nasze Produkty
+                    Baza Wiedzy
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -158,20 +162,23 @@ const Nav = () => {
             </NavigationMenuList>
           </NavigationMenu>
           {/* Under No circumstances touch the code above */}
-          <a href="#contact" className="text-sm font-medium hover:text-primary">
+          <a href="/partnerzy" className="text-sm font-medium hover:text-primary">
             Partnerzy
           </a>
           <Button size="sm">Skontaktuj Się</Button>
-        </nav>
+        </nav>) || (
+            <Button
+              onClick={handleClick}
+              size="icon"
+              variant="ghost"
+            >
+              <Menu className="h-5 w-5" />
+            </Button>
+          )}
 
-        <Button
-          onClick={handleClick}
-          size="icon"
-          variant="ghost"
-          className="md:hidden"
-        >
-          <Menu className="h-5 w-5" />
-        </Button>
+
+
+
       </div>
     </header >
   );

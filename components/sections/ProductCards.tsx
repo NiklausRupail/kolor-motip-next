@@ -8,23 +8,23 @@ export function ProductCards() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mt-16">
       <Card>
         <Link href={'/produkty/lakiery-samochodowe'}>
-        <CardHeader>
-          <Image
-            alt="Lakiery samochodowe"
-            src="/images/1.jpg"
-            width={300}
-            height={300}
-            className="rounded-lg object-cover aspect-square"
-          />
-          <CardTitle className="font-heading mt-4">Lakiery samochodowe</CardTitle>
-        </CardHeader>
-        <CardContent className="flex-grow">
-          <p className="text-muted-foreground">
-            W naszej ofercie znajdziecie m.in. lakier typu kompakt, służący do napraw lakierniczych
-            powstałych na samochodzie zadrapań i środki pomocnicze, np. lakier podkładowy, spot
-            blender itp.
-          </p>
-        </CardContent>
+          <CardHeader>
+            <Image
+              alt="Lakiery samochodowe"
+              src="/images/1.jpg"
+              width={250}
+              height={200}
+              className="shadow-lg object-cover w-full"
+            />
+            <CardTitle className="font-heading mt-4">Lakiery samochodowe</CardTitle>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <p className="text-muted-foreground">
+              W naszej ofercie znajdziecie m.in. lakier typu kompakt, służący do napraw lakierniczych
+              powstałych na samochodzie zadrapań i środki pomocnicze, np. lakier podkładowy, spot
+              blender itp.
+            </p>
+          </CardContent>
         </Link>
       </Card>
       <Card className="flex flex-col">
@@ -32,9 +32,9 @@ export function ProductCards() {
           <Image
             alt="Środki do konserwacji"
             src="/images/2.jpg"
-            width={300}
-            height={300}
-            className="rounded-lg object-cover aspect-square"
+            width={250}
+            height={200}
+            className="shadow-lg object-cover w-full"
           />
           <CardTitle className="font-heading mt-4">Środki do konserwacji</CardTitle>
         </CardHeader>
@@ -52,7 +52,7 @@ export function ProductCards() {
             src="/images/3.jpg"
             width={300}
             height={300}
-            className="rounded-lg object-cover aspect-square object-left"
+            className="shadow-lg object-cover aspect-square object-left"
           />
           <CardTitle className="font-heading mt-4">Tuning</CardTitle>
         </CardHeader>
@@ -70,7 +70,7 @@ export function ProductCards() {
             src="/images/4.jpg"
             width={300}
             height={300}
-            className="rounded-lg object-cover aspect-square object-left-top"
+            className="shadow-lg object-cover aspect-square object-left-top"
           />
           <CardTitle className="font-heading mt-4">Środki do pielęgnacji</CardTitle>
         </CardHeader>
@@ -84,22 +84,22 @@ export function ProductCards() {
       </Card>
       <Card>
         <Link href={"/#chuj"}>
-        <CardHeader>
-          <Image
-            alt="Lakiery specjalistyczne"
-            src="/images/5.jpg"
-            width={300}
-            height={300}
-            className="rounded-lg object-cover aspect-square"
-          />
-          <CardTitle className="font-heading mt-4">Lakiery specjalistyczne</CardTitle>
-        </CardHeader>
-        <CardContent className="flex-grow">
-          <p className="text-muted-foreground">
-            W naszej ofercie znajdziecie także wiele specjalistycznych lakierów do samochodów, m.in.
-            cynk z efektem chromu, lakier żaroodporny, podkład pod plastik.
-          </p>
-        </CardContent>
+          <CardHeader>
+            <Image
+              alt="Lakiery specjalistyczne"
+              src="/images/5.jpg"
+              width={300}
+              height={300}
+              className="shadow-lg object-cover aspect-square"
+            />
+            <CardTitle className="font-heading mt-4">Lakiery specjalistyczne</CardTitle>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <p className="text-muted-foreground">
+              W naszej ofercie znajdziecie także wiele specjalistycznych lakierów do samochodów, m.in.
+              cynk z efektem chromu, lakier żaroodporny, podkład pod plastik.
+            </p>
+          </CardContent>
         </Link>
       </Card>
       <Card>
@@ -109,7 +109,7 @@ export function ProductCards() {
             src="/images/6.jpg"
             width={300}
             height={300}
-            className="rounded-lg object-cover aspect-square"
+            className="shadow-lg object-cover aspect-square"
           />
           <CardTitle className="font-heading mt-4">Spraye do graffiti</CardTitle>
         </CardHeader>
@@ -127,7 +127,7 @@ export function ProductCards() {
             src="/images/7.jpg"
             width={300}
             height={300}
-            className="rounded-lg object-cover aspect-square"
+            className="shadow-lg object-cover aspect-square"
           />
           <CardTitle className="font-heading mt-4">Lakiery uniwersalne</CardTitle>
         </CardHeader>
@@ -145,7 +145,7 @@ export function ProductCards() {
             src="/images/8.jpg"
             width={300}
             height={300}
-            className="rounded-lg object-cover aspect-square object-left"
+            className="shadow-lg object-cover aspect-square object-left"
           />
           <CardTitle className="font-heading mt-4">Spraye techniczne</CardTitle>
         </CardHeader>

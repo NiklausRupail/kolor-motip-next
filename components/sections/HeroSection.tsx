@@ -10,10 +10,10 @@ export function HeroSection() {
         <div className="absolute inset-0 z-0">
           <Image
             alt="Car being painted"
-            src="/images/drziw.jpg"
+            src="/images/hero.png"
             width={1920}
             height={1080}
-            className="object-cover w-full h-full brightness-[25%]"
+            className="object-cover md:object-bottom object-left w-full h-full "
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 py-32 h-full flex items-center">
