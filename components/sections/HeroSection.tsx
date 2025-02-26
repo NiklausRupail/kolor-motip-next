@@ -15,6 +15,7 @@ export function HeroSection() {
             width={1920}
             height={1080}
             className="object-cover md:object-bottom object-left w-full h-full "
+            loading="eager"
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 py-32 h-full flex items-center">

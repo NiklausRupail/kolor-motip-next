@@ -85,6 +85,7 @@ const LakieryPage = () => {
               width={1920}
               height={1080}
               className="object-cover w-full h-full brightness-[25%]"
+              loading="eager"
             />
           </div>
           <div className="relative z-10 container mx-auto px-4 py-32 h-full flex items-center">
