@@ -123,16 +123,19 @@ const LakieryPage = () => {
           </div>
         </div>
         <div id="content" />
-
       </div>
 
+
       <div className="container mx-auto flex flex-col gap-10">
+        <h2 className="text-3xl font-medium"> Rodzaje Lakierów</h2>
+
         {
           content.map((entry) => (
             <ProductCard codes={entry.codes} reverse={entry.reverse} key={entry.title} title={entry.title} description={entry.description} imgSrc={entry.imgSrc} />
           ))
         }
-      </div></>
+      </div>
+    </>
 
   );
 };

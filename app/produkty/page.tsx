@@ -1,4 +1,6 @@
+import { ProductCards } from "@/components/sections/ProductCards";
+
 const ProduktyPage = () => {
-  return <div>page</div>;
+  return <ProductCards />;
 };
 export default ProduktyPage;

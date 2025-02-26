@@ -25,7 +25,9 @@ export const ProductCard = (props: ProductCardProps) => {
 
       <div>
         <h1 className="text-xl md:text-2xl font-bold mb-8">{title}</h1>
-        <p className="text-base md:text-lg leading-8 md:max-w-2xl mb-8">{description}</p>
+        <Image className="md:hidden inline-block mb-8" src={`${imgSrc}`} width={200} height={300} alt="" />
+
+        <p className="text-base md:text-lg leading-5 md:max-w-2xl mb-8 ">{description}</p>
 
         <Popover>
           <PopoverTrigger asChild>
@@ -45,7 +47,6 @@ export const ProductCard = (props: ProductCardProps) => {
       </div>
 
       <Image className="hidden md:inline-block" src={`${imgSrc}`} width={250} height={300} alt="" />
-      <Image className="md:hidden inline-block" src={`${imgSrc}`} width={200} height={300} alt="" />
 
     </div >
   );

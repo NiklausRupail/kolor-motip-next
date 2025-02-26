@@ -52,7 +52,7 @@ export function ProductCards() {
             src="/images/3.jpg"
             width={300}
             height={300}
-            className="shadow-lg object-cover aspect-square object-left"
+            className="shadow-lg object-cover w-full object-left"
           />
           <CardTitle className="font-heading mt-4">Tuning</CardTitle>
         </CardHeader>
@@ -70,7 +70,7 @@ export function ProductCards() {
             src="/images/4.jpg"
             width={300}
             height={300}
-            className="shadow-lg object-cover aspect-square object-left-top"
+            className="shadow-lg object-cover w-full object-left-top"
           />
           <CardTitle className="font-heading mt-4">Środki do pielęgnacji</CardTitle>
         </CardHeader>
@@ -90,7 +90,7 @@ export function ProductCards() {
               src="/images/5.jpg"
               width={300}
               height={300}
-              className="shadow-lg object-cover aspect-square"
+              className="shadow-lg object-cover w-full"
             />
             <CardTitle className="font-heading mt-4">Lakiery specjalistyczne</CardTitle>
           </CardHeader>
@@ -109,7 +109,7 @@ export function ProductCards() {
             src="/images/6.jpg"
             width={300}
             height={300}
-            className="shadow-lg object-cover aspect-square"
+            className="shadow-lg object-cover w-full"
           />
           <CardTitle className="font-heading mt-4">Spraye do graffiti</CardTitle>
         </CardHeader>
@@ -127,7 +127,7 @@ export function ProductCards() {
             src="/images/7.jpg"
             width={300}
             height={300}
-            className="shadow-lg object-cover aspect-square"
+            className="shadow-lg object-cover w-full"
           />
           <CardTitle className="font-heading mt-4">Lakiery uniwersalne</CardTitle>
         </CardHeader>
@@ -145,7 +145,7 @@ export function ProductCards() {
             src="/images/8.jpg"
             width={300}
             height={300}
-            className="shadow-lg object-cover aspect-square object-left"
+            className="shadow-lg object-cover w-full object-left"
           />
           <CardTitle className="font-heading mt-4">Spraye techniczne</CardTitle>
         </CardHeader>
