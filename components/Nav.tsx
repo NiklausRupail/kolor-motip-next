@@ -14,6 +14,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import useWindowSize from "@/hooks/useWindowSize";
+import Link from "next/link";
 
 
 const knowledgeBase =
@@ -48,7 +49,7 @@ const Nav = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <a href="/" className="hover:scale-110 transition-transform">
+          <Link href="/" className="hover:scale-110 transition-transform">
             <Image
               alt="Auto Paint Pro Logo"
               src="/images/logo.png"
@@ -56,7 +57,7 @@ const Nav = () => {
               height={40}
               className="rounded-sm"
             />
-          </a>
+          </Link>
         </div>
         {windowWidth > breakpoint && (<nav className="hidden md:flex items-center space-x-6">
           <a
@@ -72,7 +73,7 @@ const Nav = () => {
                 <NavigationMenuTrigger>
 
                   <a
-                    href="#gallery"
+                    href="/produkty"
                     className="text-sm font-medium hover:text-primary"
                   >
                     Produkty
@@ -84,7 +85,7 @@ const Nav = () => {
                       <NavigationMenuLink asChild>
                         <a
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                          href="/"
+                          href="/produkty"
                         >
                           <Image
                             alt="Auto Paint Pro Logo"
@@ -165,7 +166,7 @@ const Nav = () => {
           <a href="/partnerzy" className="text-sm font-medium hover:text-primary">
             Partnerzy
           </a>
-          <Button size="sm">Skontaktuj Się</Button>
+          <Link href="/kontakt"><Button size="sm">Skontaktuj Się</Button></Link>
         </nav>) || (
             <Button
               onClick={handleClick}

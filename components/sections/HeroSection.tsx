@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -28,18 +29,22 @@ export function HeroSection() {
               naszej mieszalni farb i lakierów
             </p>
             <div className="flex gap-4">
-              <Button size="lg" id="kontakt">
-                Skontaktuj Się z Nami
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                id="read-more"
-                size="lg"
-                variant="outline"
-                className="bg-background/20 hover:bg-background/40 hidden sm:block text-white"
-              >
-                Czytaj Więcej
-              </Button>
+              <Link href="/kontakt">
+                <Button size="lg" id="kontakt">
+                  Skontaktuj Się z Nami
+                  <ArrowRight className="ml-2 h-4 w-4 hover:rotate-90 transition-transform" />
+                </Button>
+              </Link>
+              <Link href="#produkty">
+                <Button
+                  id="read-more"
+                  size="lg"
+                  variant="outline"
+                  className="bg-background/20 hover:bg-background/40 hidden sm:block text-white"
+                >
+                  Czytaj Więcej
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

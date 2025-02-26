@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function ProductCards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mt-16">
+    <div id="produkty" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mt-16">
       <Card>
         <Link href={'/produkty/lakiery-samochodowe'}>
           <CardHeader>

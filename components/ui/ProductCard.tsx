@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { Button } from "./button";
 
@@ -38,7 +39,7 @@ export const ProductCard = (props: ProductCardProps) => {
               <ul className="flex flex-col gap-5 items-center">
                 {codes !== null && (
                   codes.map((code) => (
-                    <li className="text-justify">{code.name}<br></br>Art nr {code.number}</li>
+                    <li key={code.number} className="text-left">{code.name}<br></br>Art nr {code.number}</li>
                   )))}
               </ul>
             </div>
