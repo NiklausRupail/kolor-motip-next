@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function ProductCards() {
   return (
-    <div id="produkty" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mt-16">
+    <div id="produkty" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 p-6 mt-16">
       <Card>
         <Link href={'/produkty/lakiery-samochodowe'}>
           <CardHeader>
@@ -16,7 +16,7 @@ export function ProductCards() {
               height={200}
               className="shadow-lg object-cover w-full"
             />
-            <CardTitle className="font-heading mt-4">Lakiery samochodowe</CardTitle>
+            <CardTitle className="font-heading">Lakiery samochodowe</CardTitle>
           </CardHeader>
           <CardContent className="flex-grow">
             <p className="text-muted-foreground">
@@ -36,7 +36,7 @@ export function ProductCards() {
             height={200}
             className="shadow-lg object-cover w-full"
           />
-          <CardTitle className="font-heading mt-4">Środki do konserwacji</CardTitle>
+          <CardTitle className="font-heading">Środki do konserwacji</CardTitle>
         </CardHeader>
         <CardContent className="flex-grow">
           <p className="text-muted-foreground">
@@ -54,7 +54,7 @@ export function ProductCards() {
             height={300}
             className="shadow-lg object-cover w-full object-left"
           />
-          <CardTitle className="font-heading mt-4">Tuning</CardTitle>
+          <CardTitle className="font-heading">Tuning</CardTitle>
         </CardHeader>
         <CardContent className="flex-grow">
           <p className="text-muted-foreground">
@@ -72,7 +72,7 @@ export function ProductCards() {
             height={300}
             className="shadow-lg object-cover w-full object-left-top"
           />
-          <CardTitle className="font-heading mt-4">Środki do pielęgnacji</CardTitle>
+          <CardTitle className="font-heading">Środki do pielęgnacji</CardTitle>
         </CardHeader>
         <CardContent className="w-full flex justify-center items-center">
           <p className="text-muted-foreground" >
@@ -92,7 +92,7 @@ export function ProductCards() {
               height={300}
               className="shadow-lg object-cover w-full"
             />
-            <CardTitle className="font-heading mt-4">Lakiery specjalistyczne</CardTitle>
+            <CardTitle className="font-heading">Lakiery specjalistyczne</CardTitle>
           </CardHeader>
           <CardContent className="flex-grow">
             <p className="text-muted-foreground">
@@ -111,7 +111,7 @@ export function ProductCards() {
             height={300}
             className="shadow-lg object-cover w-full"
           />
-          <CardTitle className="font-heading mt-4">Spraye do graffiti</CardTitle>
+          <CardTitle className="font-heading">Spraye do graffiti</CardTitle>
         </CardHeader>
         <CardContent className="flex-grow">
           <p className="text-muted-foreground">
@@ -129,7 +129,7 @@ export function ProductCards() {
             height={300}
             className="shadow-lg object-cover w-full"
           />
-          <CardTitle className="font-heading mt-4">Lakiery uniwersalne</CardTitle>
+          <CardTitle className="font-heading">Lakiery uniwersalne</CardTitle>
         </CardHeader>
         <CardContent className="flex-grow">
           <p className="text-muted-foreground">
@@ -147,7 +147,7 @@ export function ProductCards() {
             height={300}
             className="shadow-lg object-cover w-full object-left"
           />
-          <CardTitle className="font-heading mt-4">Spraye techniczne</CardTitle>
+          <CardTitle className="font-heading">Spraye techniczne</CardTitle>
         </CardHeader>
         <CardContent className="flex-grow">
           <p className="text-muted-foreground">

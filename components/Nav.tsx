@@ -46,7 +46,7 @@ const Nav = () => {
   const breakpoint = 1024;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="hover:scale-110 transition-transform">
@@ -71,7 +71,6 @@ const Nav = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
-
                   <a
                     href="/produkty"
                     className="text-sm font-medium hover:text-primary"
@@ -166,7 +165,7 @@ const Nav = () => {
           <a href="/partnerzy" className="text-sm font-medium hover:text-primary">
             Partnerzy
           </a>
-          <Link href="/kontakt"><Button size="sm">Skontaktuj Się</Button></Link>
+          <Link href="/kontakt"><Button className="hover:text-primary hover:bg-background hover:border-primary hover:border-2 transition-colors px-6 hover:px-[22px] py-5 duration-300">Skontaktuj Się</Button></Link>
         </nav>) || (
             <Button
               onClick={handleClick}
