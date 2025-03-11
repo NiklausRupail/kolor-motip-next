@@ -56,16 +56,15 @@ const TipsPage = () => {
             </div>
             <section className="px-10 container mt-16 md:mt-32 ">
                 <Accordion type="multiple">
-                    <AccordionItem value="item-1">
-                        {content.map((entry) => (
-                            <>
+                        {content.map((entry,index) => (
+                                <AccordionItem value={`item-${index}`}>
                                 <AccordionTrigger>{entry.name}</AccordionTrigger>
                                 <AccordionContent>
                                     <Tip key={entry.name} name={entry.name} products={entry.products} steps={entry.steps} desc={entry.desc} />
                                 </AccordionContent>
-                            </>
+                            </AccordionItem >
+
                         ))}
-                    </AccordionItem>
                     <AccordionItem value="item-2">
                         <AccordionTrigger>Zarysowanie Lakieru</AccordionTrigger>
                         <AccordionContent>
