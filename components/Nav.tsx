@@ -165,7 +165,7 @@ const Nav = () => {
           <a href="/partnerzy" className="text-sm font-medium hover:text-primary">
             Partnerzy
           </a>
-          <Link href="/kontakt"><Button className="hover:text-primary hover:bg-background hover:border-primary hover:border-2 transition-colors px-6 hover:px-[22px] py-5 duration-300">Skontaktuj Się</Button></Link>
+          <Link href="/kontakt"><Button className="hover:text-primary hover:bg-background hover:border-primary border-transparent border-2 transition-colors px-6 py-5 duration-300">Skontaktuj Się</Button></Link>
         </nav>) || (
             <Button
               onClick={handleClick}

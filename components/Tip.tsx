@@ -21,23 +21,26 @@ interface TipProps {
 const Tip = (props: TipProps) => {
     const { name, products, steps, desc } = props;
     return (
-        <div className="flex flex-col justify-center gap-5">
+        <div className="flex flex-col justify-center gap-12">
             <p className="max-w-none md:max-w-[50%] ">{desc}</p>
             <div className="flex flex-col gap-5">
                 <h3 className="font-semibold text-lg sm:text-xl md:text-2xl">Jakich produktów będziesz potrzebować?</h3>
-                <ol>
-                    {products.products.map((product, index) => (
-                        <li key={product}>{index + 1}. {product}</li>
-                    ))}
-                </ol>
+                <div className="flex md:flex-row flex-col justify-around md:items-center items-start ">
+                    <ol>
+                        {products.products.map((product, index) => (
+                            <li key={product}>{index + 1}. {product}</li>
+                        ))}
+                    </ol>
+                    <Image src={products.src} alt="Użyte produkty" width={300} height={200} />
+                </div>
             </div>
             <h4 className="font-semibold text-lg sm:text-xl md:text-2xl">Jak to zrobić krok po kroku: </h4>
             <div className="flex flex-col gap-10">
                 {steps.map((step, index) => (
                     <div key={step.content} className="flex flex-col md:flex-row gap-5 md:gap-0 md:items-center justify-between">
-                        <h5 className="font-bold relative text-4xl text-black/25">0{index}</h5>
-                        <p className="w-3/4 ">{step.content}</p>
-                        <Image alt="" width={100} height={200} src={step.src} />
+                        <h5 className="font-bold relative text-4xl lg:text-5xl text-black/25">0{index + 1}</h5>
+                        <p className="w-3/5">{step.content}</p>
+                        <Image alt="" width={200} height={100} src={step.src} />
                     </div>
                 ))}
             </div>
