@@ -12,9 +12,10 @@ export function ProductCards() {
             <Image
               alt="Lakiery samochodowe"
               src="/images/1.jpg"
-              width={250}
-              height={200}
+              width={300}
+              height={300}
               className="shadow-lg object-cover w-full"
+              quality={80}
             />
             <CardTitle className="font-heading">Lakiery samochodowe</CardTitle>
           </CardHeader>
@@ -32,9 +33,10 @@ export function ProductCards() {
           <Image
             alt="Środki do konserwacji"
             src="/images/2.jpg"
-            width={250}
-            height={200}
+            width={300}
+            height={300}
             className="shadow-lg object-cover w-full"
+            quality={80}
           />
           <CardTitle className="font-heading">Środki do konserwacji</CardTitle>
         </CardHeader>
@@ -53,6 +55,8 @@ export function ProductCards() {
             width={300}
             height={300}
             className="shadow-lg object-cover w-full object-left"
+            quality={80}
+
           />
           <CardTitle className="font-heading">Tuning</CardTitle>
         </CardHeader>
@@ -71,6 +75,8 @@ export function ProductCards() {
             width={300}
             height={300}
             className="shadow-lg object-cover w-full object-left-top"
+            quality={80}
+
           />
           <CardTitle className="font-heading">Środki do pielęgnacji</CardTitle>
         </CardHeader>
@@ -91,6 +97,8 @@ export function ProductCards() {
               width={300}
               height={300}
               className="shadow-lg object-cover w-full"
+              quality={80}
+
             />
             <CardTitle className="font-heading">Lakiery specjalistyczne</CardTitle>
           </CardHeader>
@@ -110,6 +118,8 @@ export function ProductCards() {
             width={300}
             height={300}
             className="shadow-lg object-cover w-full"
+            quality={80}
+
           />
           <CardTitle className="font-heading">Spraye do graffiti</CardTitle>
         </CardHeader>
@@ -128,6 +138,8 @@ export function ProductCards() {
             width={300}
             height={300}
             className="shadow-lg object-cover w-full"
+            quality={80}
+
           />
           <CardTitle className="font-heading">Lakiery uniwersalne</CardTitle>
         </CardHeader>
@@ -146,6 +158,8 @@ export function ProductCards() {
             width={300}
             height={300}
             className="shadow-lg object-cover w-full object-left"
+            quality={80}
+
           />
           <CardTitle className="font-heading">Spraye techniczne</CardTitle>
         </CardHeader>

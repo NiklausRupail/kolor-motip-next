@@ -1,8 +1,18 @@
 "use client";
 import { Menu } from "lucide-react";
-import { Button } from "./ui/button";
 import Image from "next/image";
 import { useState } from "react";
+import { Button } from "@/components/ui/button"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 import {
   NavigationMenu,
@@ -15,6 +25,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import useWindowSize from "@/hooks/useWindowSize";
 import Link from "next/link";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 
 const knowledgeBase =
@@ -49,7 +60,7 @@ const Nav = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Link href="/" className="hover:scale-110 transition-transform">
+          <Link href="/" className="hover:scale-95 transition-transform duration-300">
             <Image
               alt="Auto Paint Pro Logo"
               src="/images/logo.png"
@@ -162,18 +173,39 @@ const Nav = () => {
             </NavigationMenuList>
           </NavigationMenu>
           {/* Under No circumstances touch the code above */}
-          <a href="/partnerzy" className="text-sm font-medium hover:text-primary">
+          <Link href="/partnerzy" className="text-sm font-medium hover:text-primary">
             Partnerzy
-          </a>
+          </Link>
           <Link href="/kontakt"><Button className="hover:text-primary hover:bg-background hover:border-primary border-transparent border-2 transition-colors px-6 py-5 duration-300">Skontaktuj Się</Button></Link>
         </nav>) || (
-            <Button
-              onClick={handleClick}
-              size="icon"
-              variant="ghost"
-            >
-              <Menu className="h-5 w-5" />
-            </Button>
+            <>
+              <Sheet >
+                <SheetTrigger asChild><Button
+                  onClick={handleClick}
+                  size="icon"
+                  variant="ghost"
+                >
+                  <Menu className="h-5 w-5" />
+                </Button>
+
+                </SheetTrigger>
+                <SheetContent side="left">
+
+                  <SheetHeader>
+                    <SheetTitle className="flex items-center justify-center">
+                      <Link href="/">
+                        <Image
+                          alt="Auto Paint Pro Logo"
+                          src="/images/logo.png"
+                          width={150}
+                          height={40}
+                          className="rounded-sm hover:scale-95 transition-transform duration-300" />
+                      </Link>
+                    </SheetTitle>
+                  </SheetHeader>
+                  <div>Menu</div>
+                </SheetContent>
+              </Sheet></>
           )}
 
 
