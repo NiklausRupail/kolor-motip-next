@@ -35,7 +35,7 @@ const TipsPage = () => {
                 </section>
             </div>
             <section className="px-10 container mt-16 md:mt-32 ">
-                <Accordion type="single">
+                <Accordion type="multiple" >
                     {tipsContent.map((entry, index) => (
                         <AccordionItem value={`item-${index}`}>
                             <AccordionTrigger>{entry.name}</AccordionTrigger>

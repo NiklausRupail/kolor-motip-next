@@ -1,7 +1,24 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+
+const content = [
+    {
+        title: "Porady",
+        desc: "Sprawdź nasze porady tak by móc samemu dokonać prostych naprawy",
+        href: "/porady",
+    },
+    {
+        title: "Blog",
+        desc: "Zajrzyj na naszego bloga",
+        href: "/blog"
+    },
+    {
+        title: "Certyfikaty",
+        desc: "Posiadamy certyfikaty, które \"na papierze\" potwierdzają nasze wieloletnie doświadczenie",
+        href: "/certyfikaty"
+    }
+]
 
 const KnowledgeBasePage = () => {
     return (
@@ -17,23 +34,18 @@ const KnowledgeBasePage = () => {
                         loading="eager"
                     />
                 </div>
-                <div className="relative z-10 container mx-auto px-4 py-32 h-full flex items-center text-white flex-wrap">
+                <div className="relative z-10 container mx-auto gap-4 px-4 py-32 h-full flex max-w-screen-md text-white flex-col items-stretch">
+                    {content.map(entry => (
+                        <div className="bg-black/60 text-white p-10 flex flex-col gap-5 hover:scale-105 transition-transform duration-300">
+                            <h2 className="font-semibold text-4xl text-center"><Link href={entry.href}>{entry.title}</Link></h2>
+                            <p className="text-center">{entry.desc}</p>
+                            <Link href={entry.href}><Button className="w-full">Sprawdź</Button></Link>
+                        </div>
+                    ))}
 
-                    <div>
-                        <h2 className="font-semibold text-4xl hover:text-muted hover:-translate-y-2 transition-all duration-300"><Link href="/porady">Porady</Link></h2>
-                        <p>Sprawdź nasze porady tak by móc samemu dokonać prostych napraw</p>
-                    </div>
-                    <div>
-                        <h2 className="font-semibold text-4xl hover:text-muted hover:-translate-y-2 transition-all duration-300"><Link href="/blog">Blog</Link></h2>
-                        <p>Zajrzyj na naszego bloga </p>
-                    </div>
-                    <div>
-                        <h2 className="font-semibold text-4xl hover:text-muted hover:-translate-y-2 transition-all duration-300"><Link href="/certyfikaty">Certyfikaty</Link></h2>
-                        <p>Posiadamy certyfikaty, które "na papierze" potwierdzają nasze wieloletnie doświadczenie</p>
-                    </div>
                 </div>
-            </section>
-        </div>
+            </section >
+        </div >
     )
 }
 export default KnowledgeBasePage
