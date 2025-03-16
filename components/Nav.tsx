@@ -185,7 +185,7 @@ const Nav = () => {
                   size="icon"
                   variant="ghost"
                 >
-                  <Menu className="h-5 w-5" />
+                  <Menu className="h-7 w-7" />
                 </Button>
 
                 </SheetTrigger>
