@@ -5,10 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -21,12 +18,16 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import useWindowSize from "@/hooks/useWindowSize";
 import Link from "next/link";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { AccordionContent, AccordionTrigger, Accordion, AccordionItem } from "./ui/navAccordion";
 
+const mobileNavContent = [
+  { title: "O Nas", href: "/o-nas" },
+  { title: "Partnerzy", href: "/partnerzy" },
+  { title: "Kontakt", href: "/kontakt" }
+];
 
 const knowledgeBase =
   [
@@ -49,10 +50,7 @@ const products = [
 
 const Nav = () => {
 
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
+
   const windowWidth = useWindowSize().width;
   const breakpoint = 1024;
 
@@ -91,7 +89,7 @@ const Nav = () => {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 items-center p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                    <li className="row-span-9 transition-transform hover:scale-110">
+                    <li className="row-span-9 transition-transform hover:scale-95 duration-300">
                       <NavigationMenuLink asChild>
                         <a
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
@@ -136,7 +134,7 @@ const Nav = () => {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 items-center justify-center p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_.75fr]">
-                    <li className="row-span-3 transition-transform hover:scale-110">
+                    <li className="row-span-3 transition-transform hover:scale-95 duration-300">
                       <NavigationMenuLink asChild>
                         <a
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
@@ -176,17 +174,19 @@ const Nav = () => {
           <Link href="/partnerzy" className="text-sm font-medium hover:text-primary">
             Partnerzy
           </Link>
-          <Link href="/kontakt"><Button className="hover:text-primary hover:bg-background hover:border-primary border-transparent border-2 transition-colors px-6 py-5 duration-300">Skontaktuj Się</Button></Link>
+          <Link href="/kontakt">
+            <Button className="hover:text-primary hover:bg-background hover:border-primary border-transparent border-2 transition-colors px-6 py-5 duration-300">Skontaktuj Się</Button>
+          </Link>
         </nav>) || (
             <>
-              <Sheet >
-                <SheetTrigger asChild><Button
-                  onClick={handleClick}
-                  size="icon"
-                  variant="ghost"
-                >
-                  <Menu className="h-7 w-7" />
-                </Button>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button asChild
+                    size="icon"
+                    variant="ghost"
+                  >
+                    <Menu className="h-7 w-7" />
+                  </Button>
 
                 </SheetTrigger>
                 <SheetContent side="left">
@@ -199,13 +199,50 @@ const Nav = () => {
                           src="/images/logo.png"
                           width={150}
                           height={40}
-                          className="rounded-sm hover:scale-95 transition-transform duration-300" />
+                          className="rounded-sm hover:scale-95 transition-transfosinglerm duration-300" />
                       </Link>
                     </SheetTitle>
                   </SheetHeader>
-                  <div>Menu</div>
+                  <div className="flex flex-col items-center mt-8 gap-5">
+
+
+                    <Accordion type="multiple" >
+                      <AccordionItem value="produkty">
+                        <AccordionTrigger className="my-0">Produkty</AccordionTrigger>
+                        <AccordionContent className="flex flex-col text-center gap-3 ">
+                          {products.map((entry) => (
+                            <Link key={entry.href} href={entry.href} className="text-sm font-medium hover:text-primary">
+                              {entry.title}
+                            </Link>
+                          ))}
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+
+                    {mobileNavContent.map((entry) => (
+                      <Link key={entry.href} href={entry.href} className="text-sm font-medium hover:text-primary">
+                        {entry.title}
+                      </Link>
+                    ))}
+
+                    <Accordion type="multiple" >
+                      <AccordionItem value="baza-wiedzy">
+                        <AccordionTrigger className="my-0">Baza Wiedzy</AccordionTrigger>
+                        <AccordionContent className="flex flex-col text-center gap-3 ">
+                          {knowledgeBase.map((entry) => (
+                            <Link key={entry.href} href={entry.href} className="text-sm font-medium hover:text-primary">
+                              {entry.title}
+                            </Link>
+                          ))}
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+
+
+                  </div>
                 </SheetContent>
-              </Sheet></>
+              </Sheet>
+            </>
           )}
 
 
