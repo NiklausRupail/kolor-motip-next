@@ -38,7 +38,7 @@ export const ProductCard = (props: ProductCardProps) => {
               <ul className="flex flex-col gap-5 items-center">
                 {codes !== null && (
                   codes.map((code) => (
-                    <li key={code.number} className="text-left">{code.name}<br></br>Art nr {code.number}</li>
+                    <li key={code.number} className="w-full text-left">{code.name}<br></br>Art nr {code.number}</li>
                   )))}
               </ul>
             </div>

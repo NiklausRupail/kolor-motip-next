@@ -1,4 +1,3 @@
-"use client";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/Cards/ProductCard";
 import { ArrowRight } from "lucide-react";
@@ -41,14 +40,14 @@ const LakieryPage = () => {
 
 
       </div>
-      <div className="w-full flex  justify-center items-center mt-24 mb-64">
-        <div className="infoWrapper flex flex-col md:flex-row">
+      <div className="w-full flex justify-center items-center mt-24 mb-64 container">
+        <div className="infoWrapper flex flex-col lg:flex-row">
           <Image alt="Lakiery" src="/images/lakiery.png"
             width={700}
             height={500}
             className="object-cover"
           />
-          <div className="bg-primary text-background flex flex-col gap-5 p-10 static md:relative top-36 left-5">
+          <div className="bg-primary text-background flex flex-col gap-5 p-10 static lg:relative top-36 left-5">
             <h2 className="text-3xl font-medium">Jaki odcień <br /> lakieru wybrać?</h2>
             <p className="max-w-sm">
               Samodzielny dobór odpowiedniego odcienia lakieru samochodowego może okazać się karkołomnym zadaniem. W niektórych przypadkach znajomość fabrycznego oznaczenia koloru to jedynie połowa sukcesu. Wraz z wiekiem kolor lakieru może matowieć lub blednąć. Mimo to, <strong>warto odszukać tabliczkę znamionową z oznaczeniem odcienia</strong>, ponieważ będzie ona stanowić punkt wyjścia w wyborze kolorystyki.
@@ -60,7 +59,7 @@ const LakieryPage = () => {
 
 
       <div className="container mx-auto flex flex-col gap-10">
-        <h2 className="text-3xl font-medium"> Rodzaje Lakierów</h2>
+        <h2 className="text-3xl font-medium">Rodzaje Lakierów</h2>
 
         {
           content.map((entry) => (
